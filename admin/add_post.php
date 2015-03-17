@@ -1,5 +1,6 @@
 <?php
-include ("./lock.php");
+
+include_once ("./lock.php");
 include ("blocks/bd.php");
 if (isset($_POST['january']))       
 {

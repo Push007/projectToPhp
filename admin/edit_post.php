@@ -1,5 +1,6 @@
 <?php
-include ("./lock.php");
+
+include_once "./lock.php";
 include ("blocks/bd.php");
 if (isset($_GET['ids'])) {$ids = $_GET['ids'];}
 if (isset($_GET['idm'])) {$idm = $_GET['idm'];}
