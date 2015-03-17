@@ -1,5 +1,5 @@
-﻿<?php 
-//include ("lock.php");
+<?php
+include ("./lock.php");
 include ("blocks/bd.php");
 if (isset($_POST['january']))       
 {

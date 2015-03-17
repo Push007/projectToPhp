@@ -1,11 +1,11 @@
-<?php
-include ("./lock.php");
-?>
+<?php // include ("lock.php");
+include ("blocks/bd.php");
+ ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="0";>
-<title>Главная страница блока администратора</title>
+<title>Страница удаление названии услуги</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -38,7 +38,24 @@ include ("./lock.php");
 	
 			
 			<td valign="top">
-		    <p>Добро пожаловать в админский блок.</p> 
+		    <p><strong>Выберите название услуги для удаление</strong></p>
+          <form action="drop_serv.php" method="post">
+					<? 
+
+					$result = mysql_query("SELECT nameserv,ids FROM services");      
+					$myrow = mysql_fetch_array($result);
+
+					do 
+					{
+					printf ("<p><input name='ids' type='radio' value='%s'><label> %s</label></p>",$myrow["ids"],$myrow["nameserv"]);
+					}
+
+					while ($myrow = mysql_fetch_array($result));
+					?>
+
+					<p> <input name="submit" type="submit" value="Удалить!!!"></p>
+
+					</form>
 			</td>
 			
      

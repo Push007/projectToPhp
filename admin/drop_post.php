@@ -1,5 +1,6 @@
-<?php
-include ("./lock.php");
+﻿<?php 
+//include ("lock.php");
+
 include ("blocks/bd.php");
 if (isset($_POST['january']))       
 {
@@ -46,30 +47,38 @@ if (isset($_POST['december']))      {$december = $_POST['december']; if ($decemb
 	<a href="edit_post.php">Редактировать</a>
 	<a href="del_post.php">Удалить</a>
 	</div>
+	<p align="center" class="title">Услуги</p>
+	<div id="coolmenu">
+	<a href="new_serv.php">Добавить</a>
+	<a href="edit_serv.php">Редактировать</a>
+	<a href="del_serv.php">Удалить</a>
+	</div>
+	
+	<p align="center" class="title">Гос.организации</p>
+	<div id="coolmenu">
+	<a href="new_gosorg.php">Добавить</a>
+	<a href="edit_godorg.php">Редактировать</a>
+	<a href="del_gosorg.php">Удалить</a>
+	</div>
 	</td>
 			
 			<td valign="top">
 		    <?php 
-if (isset($january) || isset($february) || isset($march) || isset($april) || isset($may) || isset($june) || isset($july) || isset($august) || isset($september) || isset($october) || isset($november) || isset($december))
-{
-/* Здесь пишем что можно заносить информацию в базу */
-$result = mysql_query ("UPDATE data SET january='$january', february='$february', march='$march', april='$april', may='$may', june='$june', july='$july', august='$august', september='$september', october='$october', november='$november', december='$december' WHERE id='$id'");
+					if (isset($january) || isset($february) || isset($march) || isset($april) || isset($may) || isset($june) || isset($july) || isset($august) || isset($september) || isset($october) || isset($november) || isset($december) || isset($id))
+					{
+					/* Здесь пишем что можно заносить информацию в базу */
+					$result = mysql_query ("DELETE FROM data WHERE id='$id'");
 
-if ($result == 'true') {echo "<p>Ваши данные успешно обновлена!</p>";}
-else {echo "<p>Ваши данные не обновлена!</p>";}
+					if ($result == 'true') {echo "<p>Ваши данные успешно удалена!</p>";}
+					else {echo "<p>Ваши данные не удалена!</p>";}
 
-}		 
-else 
+					}		 
+					else 
 
-{
-echo "<p>Вы не ввели информацию, поэтому данные в базе не может быть обновлена.</p>";
-}
-/*	
-	$rr="UPDATE data SET january='$january', february='$february', march='$march', april='$april', may='$may', june='$june', july='$july', august='$august', september='$september', october='$october', november='$november', december='$december' WHERE id='$id'";
-var_dump($rr);	*/
-		 
-		 
-		 ?> 
+					{
+					echo "<p>Вы запустили данный файл без параметра id и поэтому, удалить друга невозможно (скорее всего Вы не выбрали радиокнопку на предыдущем шаге).</p>";
+					}
+					?> 
 			</td>
 			
      

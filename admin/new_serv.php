@@ -1,6 +1,4 @@
-<?php
-include ("./lock.php");
-?>
+<?php// include ("lock.php"); ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -38,7 +36,18 @@ include ("./lock.php");
 	
 			
 			<td valign="top">
-		    <p>Добро пожаловать в админский блок.</p> 
+		    <form name="form1" method="post" action="add_serv.php">
+         <p>
+           <label>Введите название услуги<br>
+             <input type="text" name="nameserv" id="nameserv" class="filterInput">
+             </label>
+         </p>
+         <p>
+           <label>
+           <input type="submit" name="submit" id="submit" value="Занести данные в базу">
+           </label>
+         </p>
+       </form> 
 			</td>
 			
      

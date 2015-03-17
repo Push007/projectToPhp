@@ -1,15 +1,14 @@
-<?php
-include ("./lock.php");
+<?php // include ("lock.php"); 
+
 include ("blocks/bd.php");
 if (isset($_GET['ids'])) {$ids = $_GET['ids'];}
 if (isset($_GET['idm'])) {$idm = $_GET['idm'];}
-
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="0";>
-<title>Страница редактирования мероприятии</title>
+<title>Страница удаление данных</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -23,6 +22,7 @@ if (isset($_GET['idm'])) {$idm = $_GET['idm'];}
 	<a href="edit_post.php">Редактировать</a>
 	<a href="del_post.php">Удалить</a>
 	</div>
+	
 	<p align="center" class="title">Услуги</p>
 	<div id="coolmenu">
 	<a href="new_serv.php">Добавить</a>
@@ -37,6 +37,8 @@ if (isset($_GET['idm'])) {$idm = $_GET['idm'];}
 	<a href="del_gosorg.php">Удалить</a>
 	</div>
 	</td>
+	
+	
 			
 			<td valign="top">
 		    <?php 
@@ -48,7 +50,7 @@ if (isset($_GET['idm'])) {$idm = $_GET['idm'];}
 
 			do 
 			{
-			printf ("<p><a href='edit_post.php?ids=%s'>%s</a></p>",$myrow["ids"],$myrow["nameserv"]);
+			printf ("<p><a href='del_post.php?ids=%s'>%s</a></p>",$myrow["ids"],$myrow["nameserv"]);
 			}
 
 			while ($myrow = mysql_fetch_array($results));
@@ -62,7 +64,7 @@ $myrow = mysql_fetch_array($resulte);
 
 print <<<HERE
 
-<form name="form1" method="post" action="update_post.php">
+<form name="form1" method="post" action="drop_post".php">
 			   <table width="100%"  border="2" rules="all" class="table1">
 			<tr>
 				<td align="center" colspan="3" width="5%">1 квартал</td>
@@ -108,7 +110,7 @@ print <<<HERE
 		
 		<p>
            <label>
-           <input type="submit" name="submit" id="submit" value="Сохранить изменения">
+           <input type="submit" name="submit" id="submit" value="Удалить!!!">
            </label>
          </p>
            </form>
@@ -121,7 +123,7 @@ else if (isset($ids))
 
 			do 
 			{
-			printf ("<p><a href='edit_post.php?idm=%s&ids=%s'>%s</a></p>",$myrow["idm"],$ids,$myrow["meas"]);
+			printf ("<p><a href='del_post.php?idm=%s&ids=%s'>%s</a></p>",$myrow["idm"],$ids,$myrow["meas"]);
 			}
 
 			while ($myrow = mysql_fetch_array($resultm));

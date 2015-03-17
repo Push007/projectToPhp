@@ -1,4 +1,5 @@
-﻿<? //include ("lock.php");
+<?php 
+include ("./lock.php");
 include ("blocks/bd.php"); ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -18,6 +19,20 @@ include ("blocks/bd.php"); ?>
 	<a href="edit_post.php">Редактировать</a>
 	<a href="del_post.php">Удалить</a>
 	</div>
+	<p align="center" class="title">Услуги</p>
+	<div id="coolmenu">
+	<a href="new_serv.php">Добавить</a>
+	<a href="edit_serv.php">Редактировать</a>
+	<a href="del_serv.php">Удалить</a>
+	</div>
+	
+	<p align="center" class="title">Гос.организации</p>
+	<div id="coolmenu">
+	<a href="new_gosorg.php">Добавить</a>
+	<a href="edit_godorg.php">Редактировать</a>
+	<a href="del_gosorg.php">Удалить</a>
+	</div>
+	
 	</td>
 			
 			<td valign="top">
