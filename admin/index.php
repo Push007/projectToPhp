@@ -6,7 +6,7 @@ include_once "./lock.php";
 <html>
 <head>
 <meta http-equiv="Content-Type" content="0";>
-<title>Главная страница блока администратора</title>
+<title>Главная страница</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -16,7 +16,7 @@ include_once "./lock.php";
     <td width="182px" valign="top" class="left">
 	<p align="center" class="title">Мероприятии</p>
 	<div id="coolmenu">
-	<a href="new_post.php">Добавить</a>
+	<a href="new_meropri.php">Добавить</a>
 	<a href="edit_post.php">Редактировать</a>
 	<a href="del_post.php">Удалить</a>
 	</div>
@@ -28,18 +28,15 @@ include_once "./lock.php";
 	<a href="del_serv.php">Удалить</a>
 	</div>
 	
-	<p align="center" class="title">Гос.организации</p>
+	<p align="center" class="title">Отчёт</p>
 	<div id="coolmenu">
-	<a href="new_gosorg.php">Добавить</a>
-	<a href="edit_godorg.php">Редактировать</a>
-	<a href="del_gosorg.php">Удалить</a>
-	</div>
+	<a href="ar.php">Годовой отчёт</a>
 	</td>
 	
 	
 			
 			<td valign="top">
-		    <p>Добро пожаловать в админский блок.</p> 
+		    <p>Добро пожаловать!!!</p> 
 			</td>
 			
      
